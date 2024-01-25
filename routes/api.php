@@ -22,4 +22,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::group(['prefix' => 'v1', 'namespace' => 'App\Http\Controllers\Api\V1' ], function() {
     Route::apiResource('posts', PostApiController::class);
     Route::apiResource('products', ProductApiController::class);
+    Route::apiResource('categories', CategoryApiController::class);
 });
